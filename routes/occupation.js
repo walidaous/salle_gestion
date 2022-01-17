@@ -3,7 +3,6 @@ const router = express.Router()
 const Salle = require('../models/salle')
 const occupation = require('../models/occupation')
 const creneau = require('../models/creneau')
-const WebSocket = require('ws');
 const Bloc = require("../models/bloc");
 
 
