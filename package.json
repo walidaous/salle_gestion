@@ -16,7 +16,8 @@
     "mongoose": "^5.9.13",
     "swagger-jsdoc": "^6.1.0",
     "swagger-ui-express": "^4.3.0",
-    "ws": "^8.4.0"
+    "ws": "^8.4.0",
+    "cors": "^2.8.5"
   },
   "devDependencies": {
     "cors": "^2.8.5",

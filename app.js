@@ -2,23 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const url = 'mongodb+srv://walid:M624635@cluster0.wid6g.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 const app = express()
-const WebSocket = require('ws')
-const wss = new WebSocket.Server({ port: 8080 });
 
-wss.on('connection', function connection(ws) {
-    //console.log('A new client Connected!');
-    //ws.send('Welcome New Client!');
-
-    ws.on('message', function incoming(message) {
-        //console.log('received: %s', message);
-        wss.clients.forEach(function each(client) {
-            if (client !== ws && client.readyState === WebSocket.OPEN) {
-                client.send(message);
-            }
-        });
-
-    });
-});
 mongoose.connect(url, {useNewUrlParser:true})
 const con = mongoose.connection
 
