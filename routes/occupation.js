@@ -82,7 +82,7 @@ router.get('/salleparbloc/:id',async function (req, res, next) {
 });
 router.get('/a2/salleparbloc2/:id',async function (req, res, next) {
     Salle.find({"bloc":req.params.id}).populate("salle").then(function (salle) {
-        occupation.find({"creneau":'61c8c0a3d43fff36a92317ca',
+        occupation.find({"creneau":'61e5f4fd5ae21b1c9c06dec6',
             "salle": salle, "date": {
                 $gte: new Date(new Date().setHours(0, 0, 0)),
                 $lt: new Date(new Date().setHours(23, 59, 59))
