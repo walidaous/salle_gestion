@@ -5,12 +5,7 @@ const occupation = require('../models/occupation')
 const creneau = require('../models/creneau')
 const WebSocket = require('ws');
 const Bloc = require("../models/bloc");
-const socket = new WebSocket('ws://localhost:8080');
 
-socket.on('connection', function connection(ws) {
-    console.log('A new client Connected!');
-    ws.send('Welcome New Client!');
-});
 
 router.get('/',function(req,res,next){
     occupation.find({}).populate('salle',).populate('creneau').then(function(salle){
