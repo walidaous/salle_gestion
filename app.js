@@ -16,7 +16,7 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
     next();
   });
-
+app.use(express.json())
 const blocRouter = require('./routes/blocs')
 app.use('/blocs',blocRouter)
 const salleRouter = require('./routes/salles')
